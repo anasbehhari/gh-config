@@ -1,30 +1,33 @@
 # gh-config
 
-A simple batch script to manage multiple Git configurations (profiles) on Windows.
+A simple batch script to manage multiple Git profiles.
 
 ## Description
 
-`gh-config` allows you to easily switch between different Git user names and email addresses. This is useful if you work on multiple projects with different identities.
-
-## Installation
-
-1.  Download the `gh-config.bat` file.
-2.  Place it in a directory of your choice (e.g., `C:\tools\gh-config`).
-3.  Add the directory to your `PATH` environment variable.
-
-    - **How to add to PATH (Windows):**
-      - Search for "Edit the system environment variables" in the Start Menu.
-      - Click "Environment Variables...".
-      - In the "System variables" section, find the "Path" variable and click "Edit...".
-      - Click "New" and add the directory where you saved `gh-config.bat` (e.g., `C:\tools\gh-config`).
-      - Click "OK" on all the dialogs.
-
-4.  Open a new command prompt or PowerShell window for the changes to take effect.
+This script allows you to easily create, switch between, list, and delete different Git configurations. It's useful for managing different Git identities for work, personal projects, etc.
 
 ## Usage
 
-```batch
-gh-config create  (Creates a new Git profile)
-gh-config use [profile] (Switches to the given Git profile)
-gh-config list  (Lists all available Git profiles)
+1.  **Download:** Download the `gh-config.bat` file.
+2.  **Save:** Save it to a convenient location on your system (e.g., `C:\gh-config`).
+3.  **Add to PATH (Optional but Recommended):** Add the directory where you saved `gh-config.bat` to your system's PATH environment variable. This will allow you to run the script from any directory in your terminal.
+4.  **Run:** Open a command prompt or terminal and use the following commands:
+
+    - `gh-config create`: Creates a new Git profile.
+    - `gh-config use [profile_name]`: Switches to the specified Git profile.
+    - `gh-config list`: Lists all available Git profiles.
+    - `gh-config delete [profile_name]`: Deletes the specified Git profile.
+    - `gh-config`: Lists all available Git profiles (default action).
+
+## Example
+
+```bash
+gh-config create
+Enter profile name: work
+Enter email: [email address removed]
+Enter username: Work User
+
+gh-config use work
+
+gh-config list
 ```
